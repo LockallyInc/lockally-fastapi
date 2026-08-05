@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lockally-fastapi"
+version = "0.1.0"
+description = "Official Lockally dependency for FastAPI — send transactional email via Lockally."
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [{ name = "Lockally", email = "support@lockally.com" }]
+keywords = ["lockally", "fastapi", "email", "transactional"]
+dependencies = [
+    "lockally>=0.1,<1",
+    "fastapi>=0.100",
+]
+
+[project.optional-dependencies]
+test = ["pytest", "httpx"]
+
+[project.urls]
+Homepage = "https://lockally.com"
+Repository = "https://github.com/lockallyinc/lockally-fastapi"
+
+[tool.setuptools]
+packages = ["lockally_fastapi"]
